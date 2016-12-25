@@ -1,0 +1,12 @@
+header{
+	position:relative;
+	top:45px;
+	background:red;
+	div{
+		@include flexku(column,center,center);
+		padding:15px;
+		img{
+			width:60%;
+		}
+	}
+}

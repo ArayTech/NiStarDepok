@@ -1,0 +1,50 @@
+nav{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:99;
+	overflow:hidden;
+	@extend .yellow, .darken-2;
+	.nav-wrapper{
+		.navtoggle{
+			position: relative;
+			top:-13px;
+			left:10%;
+		}
+		@include flexku(row,center,space-between);
+		div{
+			position:relative;
+			top:0;
+			.fa{
+				@include flexku(column,center,auto);
+				font-size:2.5em;
+				@include resTo(480px){ font-size:2.2em; }
+			}
+			@include resTo(615px){ top:25%; }
+			.button-collapse{
+				top:-13px;
+				left:50%;
+			}
+		}
+	}
+	a{
+		i{
+			color:white;
+			text-decoration: none;	
+		}
+		&:active,&:focus{
+			text-decoration: none;
+			i{
+				color:white;
+				text-decoration:none;	
+			}
+		}	
+	}
+}
+
+#navtitle{
+	position: relative;
+	top:1px;
+	font-size:1.3em;
+	font-weight: bold;
+}

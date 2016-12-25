@@ -1,0 +1,3 @@
+@mixin resTo($ukuran){
+	@media screen and (max-width:$ukuran){ @content };
+}

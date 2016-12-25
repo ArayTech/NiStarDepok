@@ -1,0 +1,33 @@
+#filter{
+	margin-top:40px;
+	padding:0 10px;
+}
+#workshop{
+	position:relative;
+	margin-top:-50px;
+	padding:10px;
+	background:#efefef;
+	float:left;
+	a{
+		margin:2.5px 0 5px 0;
+		div{
+			float:left;
+			.tanggal{
+				font-size:8px;
+				border-bottom:2px solid #efefef;
+				padding:0 0 3px 0;
+				margin-bottom:3px;
+			}
+			.title{
+				font-size:10px;
+			}
+		}
+	}
+	hr{
+		margin:10px 0;
+	}
+}
+
+.clear{
+	clear:both;
+}

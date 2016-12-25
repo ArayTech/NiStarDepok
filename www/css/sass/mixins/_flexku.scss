@@ -1,0 +1,6 @@
+@mixin flexku($arah,$align,$just){
+	display:flex;
+	flex-direction:$arah;
+	align-items:$align;
+	justify-content:$just;
+}

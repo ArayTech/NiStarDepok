@@ -1,0 +1,66 @@
+*{
+	margin:0;
+	padding:0;
+}
+nav{
+	background:$warna-1;
+	box-shadow: 0 0 5px #333;
+	padding:10px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	.logo{
+		img{
+			width:50%;
+		}
+	}
+	a{
+		width:100%;
+		display:block;
+		.navdrawer{
+			position:relative;
+			// background:white;
+			padding:10px 0;
+			left:25%;
+			width:50%;
+			@include resTo(480px){ width:70%; }
+			.bar-1{
+				width:100%;
+				height:5px;
+				background:white;
+				margin:5px 0;
+				@include transition(all 400ms ease-in-out);
+				@include resTo(480px){ top:0; height:3px; margin:-3px 0; } 
+			}
+			&:after,&:before{
+				position:absolute;
+				left:0;
+				width:100%;
+				height:5px;
+				background:white;
+				content:"";
+				@include transition(all 400ms ease-in-out);
+				@include resTo(480px){ height:3px; } 
+			}
+			&:after{ 
+				top:-5px;  @include resTo(480px){ top:0px; }
+			}
+			&:before{ 
+				bottom: -5px; @include resTo(480px){ bottom:0; }
+			}
+			&.active{
+				.bar-1{
+					opacity:0;
+					margin:0;
+				}
+				&:after{ @include transform(rotate(-45deg)); top:50%; margin-top:-3.5px; @include resTo(480px){ margin-top:-3.6px; } }
+				&:before{ @include transform(rotate(45deg)); bottom:50%; margin-bottom:-3.5px; @include resTo(480px){ margin-bottom:3.6px; } }
+			}
+		}
+	}
+}
